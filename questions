@@ -1,0 +1,16 @@
+Panasonic Questions
+-------------------
+
+* Scanners - do we target network enabled devices or not?
+	* If not, then we need pc/etc attached for network access.
+	* If not not, then what capabilities exist to send documents over the network?
+		* What kind of software can we deploy to the device?
+
+* Cloud - "google cloud print" model.
+	* Organization has an account and then registers devices with this 'account'
+	* Devices then send documents to HS in the cloud
+	* The "cloud HS" is just a stock image, which can be deployed as an appliance on-site if there are 'firewall' concerns.
+	* "cloud HS" has simple UI - allowing the "account" to sign in and see document's uploaded - that is the 'crack'
+		* services can wire up specific productions to route docs to external systems.
+		* these would run off 'edge/access' nodes in the cloud for each customer
+

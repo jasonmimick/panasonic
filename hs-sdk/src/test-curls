@@ -1,0 +1,15 @@
+
+## to get api-key and 
+## operation endpoint
+## note!! content-length = 0 otherwise, endpoint will need to timeout waiting for POST data
+curl -v -X POST --header "x-healthshare-username:ScanPointTest1" --header "x-healthshare-password:password" --header "content-length:0" http://localhost:20187/
+
+## ask for the available search fields
+curl -i -X POST --header "x-healthshare-apikey:A735921C-48A5-11E4-933F-3835581ADC00" --header "content-length: 0" http://localhost:8765/meta/subjectSearch
+
+## to search for a subject
+curl -i -X POST --header "x-healthshare-apikey:A735921C-48A5-11E4-933F-3835581ADC00" --header "content-type: application/json" --data "{ LastName : 'Zimmerman' }" http://localhost:8765/subjectSearch
+
+## to submit a document from JSON
+curl -i -X POST --header "x-healthshare-apikey:A735921C-48A5-11E4-933F-3835581ADC00" --header "content-type: application/json" --data-binary @SampleSubmitDocument.json http://localhost:8765/submitDocument
+
